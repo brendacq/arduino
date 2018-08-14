@@ -29,15 +29,15 @@ void setup(){
 }
 
 void loop(){
-  int s1=digitalRead(snsE);        //sensor externo esquerdo
-  int s2=digitalRead(snsD);        //sensor interno esquerdo 
+  int s1=digitalRead(snsE);        //sensor esquerdo
+  int s2=digitalRead(snsD);        //sensor direito
 
 
-  if (s1==0 && s2==0){                //se os dois sensores externos virem branco
+  if (s1==0 && s2==0){                //se os dois sensores virem branco
     frente();
-  } else if (s1==1 && s2==0){        //se o sensor externo esquerdo vir preto
+  } else if (s1==1 && s2==0){        //se o sensor esquerdo vir preto
     esquerda();
-  } else if (s1==0 && s2==1){       //se o sensor externo direito vir preto
+  } else if (s1==0 && s2==1){       //se o sensor direito vir preto
     direita();
   }    
 }
