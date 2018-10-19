@@ -68,6 +68,16 @@ void mode2(){
     }
   }
 }
+
+void blinking(){
+  int blink = leds[random(0,9)];
+  digitalWrite(blink, HIGH);
+  delay(1300);
+  digitalWrite(blink, LOW);
+}
+
 void loop(){
-  
+  mode1();
+  mode2();
+  blinking();
 }
