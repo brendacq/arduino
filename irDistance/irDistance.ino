@@ -17,4 +17,5 @@ void loop() {
   Serial.println(analogValue);
   Serial.print("digital: ");
   Serial.println(digitalValue);
+  delay(1300);
 }
