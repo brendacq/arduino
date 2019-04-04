@@ -1,9 +1,9 @@
 #include <Servo.h>
 #include <NewPing.h>
 
-#define snsE 0
-#define snsD 3
-#define pTrig 9
+#define snsE 5
+#define snsD 6
+#define pTrig 11
 #define pEcho 10
 
 int dist;
