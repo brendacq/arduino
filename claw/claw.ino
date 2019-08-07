@@ -11,8 +11,6 @@ Servo leftMotor, rightMotor, shoulder, elbow, gripper, sonicBase;
 bool grabbed = false; //for when the claw grabs an object
 
 void setup() {
-    leftMotor.attach(leftServoPin);
-    rightMotor.attach(rightServoPin);
     shoulder.attach(servoShoulder);
     elbow.attach(servoElbow);
     gripper.attach(servoGripper);
@@ -26,24 +24,29 @@ void loop(){
     catchObject();
   
   if(grabbed){
-    right();
-    delay(600);
-    forward();
-    delay(2000);
-    dropObject();
-  } else {
     left();
-    delay(600);
+    delay(1200);
     forward();
-    delay(2000);
+    delay(2500);
+    dropObject();
+  } 
+  
+  if(!grabbed){
+    right();
+    delay(3600);
+    forward();
+    delay(2500);
   }
-
+  delay(2000);
   adjust();
+  delay(3000);
 }
 
 void adjust(){
-  shoulder.write(40);
-  elbow.write(120);
+  leftMotor.detach();
+  rightMotor.detach();
+  shoulder.write(60);
+  elbow.write(100);
   Serial.println("elbow 150 degrees");
   gripper.write(90);
   Serial.println(" gripper 90 degrees");
@@ -51,6 +54,9 @@ void adjust(){
 }
 
 void catchObject(){
+  leftMotor.detach();
+  rightMotor.detach();
+  delay(200);
   gripper.write(30);
   Serial.println("closed");
   delay(1000);
@@ -61,24 +67,33 @@ void catchObject(){
 }
 
 void dropObject(){
+  leftMotor.detach();
+  rightMotor.detach();
+  delay(200);
   elbow.write(180);
   delay(1000);
   gripper.write(90);
-  delay(1000);
+  delay(3000);
   grabbed=false;
 }
 
 void forward(){
+  leftMotor.attach(leftServoPin);
+  rightMotor.attach(rightServoPin);
   leftMotor.write(0);
   rightMotor.write(180);
 }
 
-void left(){
+void right(){
+  leftMotor.attach(leftServoPin);
+  rightMotor.attach(rightServoPin);
   leftMotor.write(180);
   rightMotor.write(180);
 }
 
-void right(){
+void left(){
+  leftMotor.attach(leftServoPin);
+  rightMotor.attach(rightServoPin);
   leftMotor.write(0);
   rightMotor.write(0);
 }
