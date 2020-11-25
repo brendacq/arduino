@@ -14,12 +14,15 @@ Basicamente, os FSR são dispositivos que produzem uma queda na resistência el�
 
 ## Aplicação
 
-Para medir a força de Newton através de um FSR é boa idéia mapear os valores lidos no intervalo de 0V até à tensão fornecida. Depois calcula-se a resistência do FSR usando a fórmula seguinte: $R_{fsr} = \frac{(Vcc - U) * R_1}U$, 
+Para medir a força de Newton através de um FSR é boa idéia mapear os valores lidos no intervalo de 0V até à tensão fornecida. Depois calcula-se a resistência do FSR usando a fórmula seguinte:
+
+> ![equation](https://latex.codecogs.com/png.latex?R_%7Bfsr%7D%3D%5Cfrac%7B%28Vcc-U%29R_1%7DU)
 
 em que R<sub>fsr</sub> é a Resistência do sensor, Vcc é a tensão de alimentação (no caso do Arduino, 5V), U é a tensão medida e R<sub>1</sub> é a resistência do resistor pull-down.
 
 Depois, calculamos a Condutância Elétrica, G<sub>fsr</sub> (Siemens/m), que é o inverso da Resistência Elétrica:
-$G_{fsr} = \frac{1}R_{fsr}$
+
+> ![equation](https://latex.codecogs.com/png.latex?G_%7Bfsr%7D%20%3D%20%5Cfrac%7B1%7DR_%7Bfsr%7D)
 
 ## Referências
 * Datasheet: https://cdn.sparkfun.com/assets/8/a/1/2/0/2010-10-26-DataSheet-FSR402-Layout2.pdf
