@@ -1,6 +1,6 @@
 # Force Sensing Resistor  - FSR402
 
-<img alt="FSR402" src="https://sc01.alicdn.com/kf/HTB1OCy3RpXXXXX7XFXXq6xXFXXXb.jpg_350x350.jpg" style="float:center; height: 350px; width:700px">
+![FSR](https://sc01.alicdn.com/kf/HTB1OCy3RpXXXXX7XFXXq6xXFXXXb.jpg_350x350.jpg)
 
 Basicamente, os FSR são dispositivos que produzem uma queda na resistência elétrica conforme mais força física (ou pressão) é aplicada sobre ele. A quantidade de eletricidade que é possível fluir no circuito depende da pressão exercida no sensor, já que, quanto maior a pressão, mais material condutivo entrará em contato com os fios e aumentar a saída elétrica de forma previsível - o que permite detectar mudanças na Força também.
 
@@ -24,12 +24,22 @@ Depois, calculamos a Condutância Elétrica, **G<sub>fsr</sub>**, que é o inver
 
 > ![equation](https://latex.codecogs.com/png.latex?G_%7Bfsr%7D%20%3D%20%5Cfrac%7B1%7DR_%7Bfsr%7D)
 
+![Gráfico](cond-force-res.png)
+
+
+## Circuito
+
+### Esquemático
+
+<img src="schematic.png" style="width:200px; height:200px;">
+
+### Arduino
+
+<img src="https://www.makerguides.com/wp-content/uploads/2019/02/FSR-with-Arduino-wiring-diagram-1024x546.png" width="600px" height="300px">
+
 ## Referências
 * Datasheet: https://cdn.sparkfun.com/assets/8/a/1/2/0/2010-10-26-DataSheet-FSR402-Layout2.pdf
 * http://home.roboticlab.eu/pt/examples/sensor/force
-
-
-http://home.roboticlab.eu/_media/en/examples/sensor/force_conductance_graph.png?w=250&tok=60996e gráfico
 
 
 
