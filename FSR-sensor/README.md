@@ -1,5 +1,9 @@
 # Force Sensing Resistor  - FSR402
 
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 ![FSR402](https://sc01.alicdn.com/kf/HTB1OCy3RpXXXXX7XFXXq6xXFXXXb.jpg_350x350.jpg)
 
 Basicamente, os FSR são dispositivos que produzem uma queda na resistência elétrica conforme mais força física (ou pressão) é aplicada sobre ele. A quantidade de eletricidade que é possível fluir no circuito depende da pressão exercida no sensor, já que, quanto maior a pressão, mais material condutivo entrará em contato com os fios e aumentar a saída elétrica de forma previsível - o que permite detectar mudanças na Força também.
